@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BankDash.</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="page-segment">Investments</div>
+      <div class="user-area">
+        <div class="search-container">
+          <img src="./assets/search-icon.svg" alt="search icon" />
+          <input type="text" placeholder="Search for something" />
+        </div>
+        <div class="item">
+          <img src="./assets/notification.svg" alt="notifications" />
+        </div>
+        <div class="item">
+          <img src="./assets/thin-settings.svg" alt="settings" />
+        </div>
+        <div class="avatar-container">
+          <img src="./assets/avatar.svg" alt="A user avatar" />
+        </div>
+      </div>
+    </header>
+    <!-- Responsive Header -->
+    <header class="responsive">
+      <div class="user-area">
+        <button class="hamburger-menu"><img src="./assets/menu.svg" alt="" /></button>
+        <div class="page-segment">Investments</div>
+        <div class="avatar-container">
+          <img src="./assets/avatar.svg" alt="A user avatar" />
+        </div>
+      </div>
+      <div class="search-container">
+        <img src="./assets/search-icon.svg" alt="search icon" />
+        <input type="text" placeholder="Search for something" />
+      </div>
+    </header>
+    <!-- Side Menu -->
+    <div class="side-menu">
+      <div class="company-logo">
+        <img src="./assets/Logo.svg" alt="company logo" />
+      </div>
+      <ul class="menu-list">
+        <li class="menu-item">
+          <a href="#" class="menu-link"
+            ><img
+              src="./assets/home.svg"
+              alt="A link to dashboard"
+            />Dashboard</a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link"
+            ><img
+              src="./assets/transfer.svg"
+              alt="A link to transactions"
+            />Transactions</a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link"
+            ><img src="./assets/user.svg" alt="A link to accounts" />Accounts</a
+          >
+        </li>
+        <li class="menu-item active">
+          <a href="#" class="menu-link"
+            ><img
+              src="assets/investments.svg"
+              alt="A link to investments"
+            />Investments</a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link"
+            ><img
+              src="./assets/credit_card.svg"
+              alt="A link to credit card"
+            />Credit Card</a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link"
+            ><img src="./assets/loans.svg" alt="A link to loans" />Loans</a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link"
+            ><img
+              src="./assets/services.svg"
+              alt="A link to services"
+            />Services</a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link"
+            ><img src="./assets/privilges.svg" alt="A link to privileges" />My
+            Privileges</a
+          >
+        </li>
+        <li class="menu-item">
+          <a href="#" class="menu-link"
+            ><img
+              src="./assets/settings.svg"
+              alt="A link to settings"
+            />Setting</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- Content Container -->
+    <div class="container">
+      <section class="summery">
+        <div class="summery-item">
+          <div class="summery-icon-container green">
+            <img src="./assets/money-bag.svg" alt="A bag of money" />
+          </div>
+          <div class="summery-content">
+            <h6 class="summery-title">Total Invested Amount</h6>
+            <span class="amount">$150,000</span>
+          </div>
+        </div>
+        <div class="summery-item">
+          <div class="summery-icon-container pink">
+            <img src="./assets/pie-chart.svg" alt="A pie chart" />
+          </div>
+          <div class="summery-content">
+            <h6 class="summery-title">Number Of Investments</h6>
+            <span class="amount">1,250</span>
+          </div>
+        </div>
+        <div class="summery-item">
+          <div class="summery-icon-container blue">
+            <img src="./assets/repeat.svg" alt="A repeat" />
+          </div>
+          <div class="summery-content">
+            <h6 class="summery-title">Rate Of Return</h6>
+            <span class="amount">+%5,80</span>
+          </div>
+        </div>
+      </section>
+      <section class="charts">
+        <div class="chart-item">
+          <h6 class="title">Yearly Total Investment</h6>
+          <div class="chart">
+            <canvas id="investment"></canvas>
+          </div>
+        </div>
+        <div class="chart-item">
+          <h6 class="title">Monthly Revenue</h6>
+          <div class="chart">
+            <canvas id="revenues"></canvas>
+          </div>
+        </div>
+      </section>
+      <section class="investments">
+        <div class="personal-investments">
+          <h6 class="title">My Investments</h6>
+          <div class="investment">
+            <div class="investment-logo-container pink">
+              <img src="./assets/apple.svg" />
+            </div>
+            <div class="investment-name">
+              <h6>Apple Store</h6>
+              <p>E-commerce, Marketplace</p>
+            </div>
+            <div class="investment-value">
+              <h6>$150,000</h6>
+              <p>Investment Value</p>
+            </div>
+            <div class="investment-returns">
+              <h6 class="positive">+16%</h6>
+              <p>Return Value</p>
+            </div>
+          </div>
+          <div class="investment">
+            <div class="investment-logo-container blue">
+              <img src="./assets/google.svg" />
+            </div>
+            <div class="investment-name">
+              <h6>Samsung Mobile</h6>
+              <p>E-commerce, Marketplace</p>
+            </div>
+            <div class="investment-value">
+              <h6>$25,300</h6>
+              <p>Investment Value</p>
+            </div>
+            <div class="investment-returns">
+              <h6 class="negative">-4%</h6>
+              <p>Return Value</p>
+            </div>
+          </div>
+          <div class="investment">
+            <div class="investment-logo-container yellow">
+              <img src="./assets/tesla.svg" />
+            </div>
+            <div class="investment-name">
+              <h6>Tesla Motors</h6>
+              <p>Electric Vehicles</p>
+            </div>
+            <div class="investment-value">
+              <h6>$8,200</h6>
+              <p>Investment Value</p>
+            </div>
+            <div class="investment-returns">
+              <h6 class="positive">+25%</h6>
+              <p>Return Value</p>
+            </div>
+          </div>
+        </div>
+        <div class="stocks">
+          <h6 class="title">Trending Stocks</h6>
+          <div class="stock-table">
+            <ul class="table-header">
+              <li>SL No</li>
+              <li>Name</li>
+              <li>Price</li>
+              <li>Return</li>
+            </ul>
+            <ul class="table-row">
+              <li>01.</li>
+              <li>Trivago</li>
+              <li>$520</li>
+              <li class="positive">+5%</li>
+            </ul>
+            <ul class="table-row">
+              <li>02.</li>
+              <li>Canon</li>
+              <li>$480</li>
+              <li class="positive">+10%</li>
+            </ul>
+            <ul class="table-row">
+              <li>03.</li>
+              <li>Uber Food</li>
+              <li>$320</li>
+              <li class="negative">-3%</li>
+            </ul>
+            <ul class="table-row">
+              <li>04.</li>
+              <li>Nokia</li>
+              <li>$940</li>
+              <li class="positive">+2%</li>
+            </ul>
+            <ul class="table-row">
+              <li>05.</li>
+              <li>Tiktok</li>
+              <li>$670</li>
+              <li class="negative">-12%</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      function setLineChart(ctx, config) {
+        new Chart(ctx, { ...config });
+      }
+
+      window.addEventListener("load", () => {
+        const investmentChart = new Chart(
+          document.getElementById("investment").getContext("2d"),
+          {
+            type: "line",
+            data: {
+              labels: [2016, 2017, 2018, 2019, 2020, 2021],
+              datasets: [
+                {
+                  label: "",
+                  data: [0, 22000, 18000, 35000, 20000, 39000],
+                  fill: false,
+                  borderColor: "#FCAA0B",
+                },
+              ],
+            },
+            options: { responsive: true, maintainAspectRatio: false },
+
+            scales: {
+              y: {
+                // the data minimum used for determining the ticks is Math.min(dataMin, suggestedMin)
+                min: 0,
+
+                // the data maximum used for determining the ticks is Math.max(dataMax, suggestedMax)
+                suggestedMax: 40000,
+              },
+            },
+          }
+        );
+
+        const revenueChart = new Chart(
+          document.getElementById("revenues").getContext("2d"),
+          {
+            type: "line",
+            data: {
+              labels: [2016, 2017, 2018, 2019, 2020, 2021],
+              datasets: [
+                {
+                  label: "",
+                  data: [0, 22000, 18000, 35000, 20000, 39000],
+                  fill: false,
+                  borderColor: "#16DBCC",
+                  tension: 0.5,
+                },
+              ],
+            },
+            options: { responsive: true, maintainAspectRatio: false },
+            scales: {
+              y: {
+                // the data minimum used for determining the ticks is Math.min(dataMin, suggestedMin)
+                min: 0,
+
+                // the data maximum used for determining the ticks is Math.max(dataMax, suggestedMax)
+                suggestedMax: 40000,
+              },
+            },
+          }
+        );
+
+        window.addEventListener("resize", () => {
+          investmentChart.resize();
+          revenueChart.resize();
+        });
+      });
+
+      let menuItems = document.querySelectorAll(".menu-item");
+
+      menuItems.forEach((item) => {
+        item.addEventListener("click", () => {
+          menuItems.forEach((item) => item.classList.remove("active"));
+          item.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>
